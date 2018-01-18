@@ -1,0 +1,64 @@
+{
+  "name": "pubnub-vue",
+  "version": "0.0.1",
+  "description": "Publish & Subscribe Real-time Messaging with PubNub",
+  "author": "PubNub <support@pubnub.com>",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "main": "./src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pubnub/vue.git"
+  },
+  "keywords": [
+    "cloud",
+    "publish",
+    "subscribe",
+    "websockets",
+    "comet",
+    "bosh",
+    "xmpp",
+    "real-time",
+    "messaging",
+    "vue"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pubnub/vue/issues"
+  },
+  "homepage": "https://github.com/pubnub/vue#readme",
+  "dependencies": {
+    "pubnub": "^4.20.0"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.24.1",
+    "babel-eslint": "^7.2.3",
+    "babel-loader": "^6.2.10",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-transform-class-properties": "^6.19.0",
+    "babel-plugin-transform-flow-strip-types": "^6.21.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-vue": "^2.0.0",
+    "babel-register": "^6.18.0",
+    "babelify": "^7.3.0",
+    "browserify": "^14.4.0",
+    "chai": "^4.0.2",
+    "eslint": "^3.13.1",
+    "eslint-config-pubnub": "^2.0.0",
+    "eslint-plugin-flowtype": "^2.34.0",
+    "eslint-plugin-mocha": "^4.9.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-clean": "^0.3.2",
+    "gulp-eslint": "^3.0.1",
+    "gulp-istanbul": "^1.1.1",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-mocha": "^3.0.1",
+    "run-sequence": "^1.2.2",
+    "stats-webpack-plugin": "^0.6.1",
+    "vue": "^2.5.13",
+    "webpack-stream": "^3.2.0"
+  }
+}
