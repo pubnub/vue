@@ -1,7 +1,7 @@
-/* global describe, beforeEach, it, before, after */
+/* global describe, it, before */
 /* eslint no-console: 0 */
 import { assert } from 'chai';
-import { getStatus } from '../../src/modules'
+import { getStatus } from '../../src/modules';
 import Broadcast from '../../src/broadcast';
 
 let mock = {};

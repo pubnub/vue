@@ -1,12 +1,10 @@
-/* global describe, beforeEach, it, before, after */
+/* global describe, it, before */
 /* eslint no-console: 0 */
 import { assert } from 'chai';
 import { getMessage } from '../../src/modules';
 import Broadcast from '../../src/broadcast';
 
 let mock = {};
-
-console.log(getMessage);
 
 describe('getMessage', () => {
   before((done) => {
