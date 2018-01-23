@@ -36,18 +36,18 @@ describe('getMessage', () => {
   });
 
   it('should stack a message', (done) => {
-    mock._listener.message({ channel: 'channel1', message: 'message #1'});
-    assert.deepEqual(mock._data.messages.channel1, [{ channel: 'channel1', message: 'message #1'}], 'it was not stacked the message');
+    mock._listener.message({ channel: 'channel1', message: 'message #1' });
+    assert.deepEqual(mock._data.messages.channel1, [{ channel: 'channel1', message: 'message #1' }], 'it was not stacked the message');
     done();
   });
 
   it('should broadcast a message', (done) => {
     mock.getMessage('channel3', (msg) => {
-      assert.deepEqual(msg, { channel: 'channel3', message: 'message #1'}, 'it was not the message expected');
+      assert.deepEqual(msg, { channel: 'channel3', message: 'message #1' }, 'it was not the message expected');
       done();
     });
 
-    mock._listener.message({ channel: 'channel3', message: 'message #1'});
+    mock._listener.message({ channel: 'channel3', message: 'message #1' });
   });
 
   it('should change the stacks', (done) => {
