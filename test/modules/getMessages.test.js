@@ -3,6 +3,7 @@
 import { assert } from 'chai';
 import { getMessage } from '../../src/modules';
 import Broadcast from '../../src/broadcast';
+import Autoload from '../../src/autoload';
 
 let mock = {};
 
@@ -12,6 +13,7 @@ describe('getMessage', () => {
     mock._listener = {};
     mock._data = { messages: {} };
     mock._keepMessages = {};
+    mock._autoload = new Autoload();
     mock.getMessage = getMessage.bind(mock);
     done();
   });

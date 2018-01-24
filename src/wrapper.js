@@ -1,7 +1,7 @@
 import { getMessage, getPresence, getStatus } from './modules';
 import Broadcast from './broadcast';
 import Autoload from './autoload';
-import config from '../config';
+import config from '../config.json';
 
 /**
  * Wrap a PubNub's attributes
@@ -40,11 +40,11 @@ export default class {
     this._keepMessages = {};
 
     config.attributes_to_delegate.forEach((attribute) => {
-      wrapAttribute(originalInstance, wrappedInstance, attribute);
+      wrapAttribute(originalInstance, this, attribute);
     });
 
     config.methods_to_delegate.forEach((method) => {
-      wrapMethod(originalInstance, wrappedInstance, method);
+      wrapMethod(originalInstance, this, method);
     });
 
     this.getMessage = getMessage.bind(this);
@@ -56,10 +56,12 @@ export default class {
 
   subscribe(args) {
     this.getOriginalInstance().subscribe(args);
+    this._autoload.enableLoad(args);
   }
 
   unsubscribe(args) {
     this.getOriginalInstance().unsubscribe(args);
+    this._autoload.disableLoad(args);
   }
 
   getOriginalInstance() {

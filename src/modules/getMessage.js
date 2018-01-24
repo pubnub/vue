@@ -54,7 +54,7 @@ export function getMessage(channel) {
 
   if (init.call(this, channel)) {
     this._keepMessages[channel] = keepMessages;
-    // this._autoload.getHistory(channel, callback);
+    this._autoload.getHistory(channel, callback);
   }
 
   this._broadcast.message(channel, callback);
