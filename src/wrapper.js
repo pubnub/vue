@@ -34,7 +34,7 @@ export default class {
   constructor(originalInstance) {
     this._originInstance = originalInstance;
     this._broadcast = new Broadcast();
-    this._autoload = new Autoload();
+    this._autoload = new Autoload(originalInstance);
     this._listener = {};
     this._data = { messages: {}, presence: {}, status: {} };
     this._keepMessages = {};

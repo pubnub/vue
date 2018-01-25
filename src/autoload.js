@@ -1,18 +1,9 @@
 import config from '../config.json';
 
 export default class {
-  constructor() {
+  constructor(instance) {
     this.count = {};
-    this.instance = undefined;
-  }
-
-  /**
-   * Initialize the autoload with a wrapper instance
-   *
-   * @param instance
-   */
-  initialize(instance) {
-    this.instance = instance;
+    this._instance = instance;
   }
 
   /**
