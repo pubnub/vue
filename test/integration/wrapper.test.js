@@ -1,9 +1,9 @@
 /* global describe, it */
 /* eslint no-console: 0 */
 import PubNub from 'pubnub';
+import { assert } from 'chai';
 import Wrapper from '../../src/wrapper';
 import { config, getRandomChannel } from '../testHelper';
-import { assert } from 'chai';
 
 let wrapper;
 let stack;
@@ -68,6 +68,13 @@ describe('wrapper', () => {
   it('should clean a stack of messages', (done) => {
     wrapper.clean(channel2);
     assert.lengthOf(wrapper.getMessage(channel2), 0);
+    done();
+  });
+
+  it('should release a channel', (done) => {
+    wrapper.release(channel1);
+    assert.isOk(!wrapper._data.messages[channel1]);
+    assert.isOk(wrapper._data.messages[channel2]);
     done();
   });
 });

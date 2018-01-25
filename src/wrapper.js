@@ -1,4 +1,4 @@
-import { clean, getMessage, getPresence, getStatus } from './modules';
+import { clean, getMessage, getPresence, getStatus, release } from './modules';
 import Broadcast from './broadcast';
 import Autoload from './autoload';
 import config from '../config.json';
@@ -51,6 +51,7 @@ export default class {
     this.getMessage = getMessage.bind(this);
     this.getPresence = getPresence.bind(this);
     this.getStatus = getStatus.bind(this);
+    this.release = release.bind(this);
 
     this.addListener(this._listener);
   }

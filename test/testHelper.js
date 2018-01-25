@@ -1,4 +1,4 @@
-let config = {};
+const config = {};
 
 config.demo = {
   publishKey: 'ds',
