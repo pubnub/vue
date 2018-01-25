@@ -1,4 +1,4 @@
-var config = {};
+let config = {};
 
 config.demo = {
   publishKey: 'ds',
@@ -39,17 +39,17 @@ config.demoWithHistoryRetention = {
 
 config.channelWithHistory = 'channel-with-history-messages';
 
+function getRandom(max) {
+  if (!max) max = 10000;
+  return Math.floor(Math.random() * max);
+}
+
 function getRandomChannel() {
-  return "pubnub-vue-test-publish-" + getRandom();
+  return `pubnub-vue-test-publish-${getRandom()}`;
 }
 
 function getRandomChannelGroup() {
-  return "pubnub-vue-test-publish-group" + getRandom();
+  return `pubnub-vue-test-publish-group-${getRandom()}`;
 }
 
-function getRandom(max) {
-  if (!max) max = 10000;
-  return Math.floor(Math.random() * max)
-}
-
-export { config, getRandomChannel, getRandomChannelGroup, getRandom }
+export { config, getRandomChannel, getRandomChannelGroup, getRandom };
