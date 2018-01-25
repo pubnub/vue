@@ -1,4 +1,4 @@
-import { getMessage, getPresence, getStatus } from './modules';
+import { clean, getMessage, getPresence, getStatus } from './modules';
 import Broadcast from './broadcast';
 import Autoload from './autoload';
 import config from '../config.json';
@@ -47,6 +47,7 @@ export default class {
       wrapMethod(originalInstance, this, method);
     });
 
+    this.clean = clean.bind(this);
     this.getMessage = getMessage.bind(this);
     this.getPresence = getPresence.bind(this);
     this.getStatus = getStatus.bind(this);

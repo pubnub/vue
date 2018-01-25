@@ -7,6 +7,7 @@ import { assert } from 'chai';
 
 let wrapper;
 let stack;
+let stack2;
 
 let channel1 = getRandomChannel();
 let channel2 = getRandomChannel();
@@ -42,7 +43,7 @@ describe('wrapper', () => {
   it('should stack messages', (done) => {
     wrapper.subscribe({ channels: [channel2] });
 
-    let stack2 = wrapper.getMessage(channel2);
+    stack2 = wrapper.getMessage(channel2);
 
     let t = setTimeout(() => {
       assert.lengthOf(stack2, 2);
@@ -62,5 +63,11 @@ describe('wrapper', () => {
     });
 
     wrapper.subscribe({ channels: [channel3] });
+  });
+
+  it('should clean a stack of messages', (done) => {
+    wrapper.clean(channel2);
+    assert.lengthOf(wrapper.getMessage(channel2), 0);
+    done();
   });
 });
