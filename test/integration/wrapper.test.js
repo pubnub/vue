@@ -30,7 +30,7 @@ describe('wrapper', () => {
     });
 
     wrapper.publish({ channel: channel1, message: 'hello world' });
-  }).timeout(2000);
+  }).timeout(5000);
 
   it('should retrieve from getMessage', (done) => {
     stack = wrapper.getMessage(channel1);
