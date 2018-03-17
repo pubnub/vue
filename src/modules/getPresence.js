@@ -49,9 +49,5 @@ export function getPresence(channel, callback) {
     };
   }
 
-  if (this._data && this._data.presence) {
-    return this._data.presence[channel];
-  } else {
-    return {};
-  }
+  return this._data.presence[channel];
 }

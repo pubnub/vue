@@ -71,9 +71,5 @@ export function getMessage(channel) {
     };
   }
 
-  if (this._data.messages && this._data.messages[channel]) {
-    return this._data.messages[channel];
-  } else {
-    return [];
-  }
+  return this._data.messages[channel];
 }

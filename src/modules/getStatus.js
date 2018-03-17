@@ -17,6 +17,6 @@ export function getStatus(callback) {
     };
   }
 
-  return this._data.status || {};
+  return this._data.status;
 }
 
