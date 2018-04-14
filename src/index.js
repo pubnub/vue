@@ -13,8 +13,8 @@ export default {
       },
     });
 
-    Vue.prototype.$pn_getMessage = function (channel, callback, instanceName) {
-      return PubNubVue.getInstance(instanceName).getMessage(channel, callback);
+    Vue.prototype.$pn_getMessage = function (channel, callback, keepMessages, instanceName) {
+      return PubNubVue.getInstance(instanceName).getMessage(channel, callback, keepMessages);
     };
 
     Vue.prototype.$pn_getPresence = function (channel, callback, instanceName) {
