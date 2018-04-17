@@ -26,7 +26,7 @@ function emit(channel, message) {
   messages.push(message);
 
   if (keepMessages && messages.length > keepMessages) {
-    this._data.messages = messages.slice(messages.length - keepMessages);
+    this._data.messages[channel].splice(0, messages.length - keepMessages);
   }
 
   this._broadcast.emit('message', channel, message);
@@ -43,10 +43,8 @@ export function getMessage(channel) {
   let callback;
   let keepMessages = 100;
 
-  if (arguments.length === 2 && typeof arguments[1] === 'function') {
+  if (arguments.length === 2) {
     callback = arguments[1];
-  } else if (arguments.length === 2 && typeof arguments[1] === 'number') {
-    keepMessages = arguments[1];
   } else if (arguments.length === 3) {
     callback = arguments[1];
     keepMessages = arguments[2];
