@@ -13,39 +13,43 @@ export default {
       },
     });
 
-    Vue.prototype.$pn_getMessage = function (channel, callback, keepMessages, instanceName) {
+    Vue.prototype.$pnGetInstance = function (instanceName) {
+      return PubNubVue.getInstance(instanceName, _pnConfig);
+    }
+
+    Vue.prototype.$pnGetMessage = function (channel, callback, keepMessages, instanceName) {
       return PubNubVue.getInstance(instanceName).getMessage(channel, callback, keepMessages);
     };
 
-    Vue.prototype.$pn_getPresence = function (channel, callback, instanceName) {
+    Vue.prototype.$pnGetPresence = function (channel, callback, instanceName) {
       return PubNubVue.getInstance(instanceName).getPresence(channel, callback);
     };
 
-    Vue.prototype.$pn_getStatus = function (callback, instanceName) {
+    Vue.prototype.$pnGetStatus = function (callback, instanceName) {
       return PubNubVue.getInstance(instanceName).getStatus(callback);
     };
 
-    Vue.prototype.$pn_subscribe = function (args, instanceName) {
+    Vue.prototype.$pnSubscribe = function (args, instanceName) {
       PubNubVue.getInstance(instanceName).subscribe(args);
     };
 
-    Vue.prototype.$pn_unsubscribe = function (args, instanceName) {
+    Vue.prototype.$pnUnsubscribe = function (args, instanceName) {
       PubNubVue.getInstance(instanceName).unsubscribe(args);
     };
 
-    Vue.prototype.$pn_publish = function (args, callback, instanceName) {
+    Vue.prototype.$pnPublish = function (args, callback, instanceName) {
       return PubNubVue.getInstance(instanceName).publish(args, callback);
     };
 
-    Vue.prototype.$pn_clean = function (channel, instanceName) {
+    Vue.prototype.$pnClean = function (channel, instanceName) {
       PubNubVue.getInstance(instanceName).clean(channel);
     };
 
-    Vue.prototype.$pn_release = function (channel, instanceName) {
+    Vue.prototype.$pnRelease = function (channel, instanceName) {
       PubNubVue.getInstance(instanceName).release(channel);
     };
   },
-  getInstance(name) {
-    return PubNubVue.getInstance(name, _pnConfig);
+  getInstance(instanceName) {
+    return PubNubVue.getInstance(instanceName, _pnConfig);
   }
 };
