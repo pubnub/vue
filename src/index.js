@@ -15,7 +15,7 @@ export default {
 
     Vue.prototype.$pnGetInstance = function (instanceName) {
       return PubNubVue.getInstance(instanceName, _pnConfig);
-    }
+    };
 
     Vue.prototype.$pnGetMessage = function (channel, callback, keepMessages, instanceName) {
       return PubNubVue.getInstance(instanceName).getMessage(channel, callback, keepMessages);
