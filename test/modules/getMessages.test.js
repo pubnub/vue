@@ -30,7 +30,7 @@ describe('getMessage', () => {
   });
 
   it('should set a custom value to the keepMessages', (done) => {
-    mock.getMessage('channel2', 50);
+    mock.getMessage('channel2', null, 50);
     assert.deepEqual(mock._keepMessages, { channel1: 100, channel2: 50 }, 'it was not set 50 to channel2');
     done();
   });
