@@ -1,0 +1,13 @@
+name: pubnub-vue
+version: 1.0.0
+schema: 1
+scm: github.com/pubnub/pubnub-vue
+files:
+  - dist/pubnub-vue.js
+  - dist/pubnub-vue.min.js
+changelog:
+  - version: v1.0.0
+    changes:
+      - type: feature
+        text: first public version
+    date: 2018-04-26
