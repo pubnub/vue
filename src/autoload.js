@@ -29,7 +29,7 @@ export default class {
    */
   getHistory(channel, callback) {
     if (this.count[channel]) {
-      let instance = this.instance;
+      let instance = this._instance;
       let _channels = Array.isArray(channel) ? channel : [channel];
       let times = _channels.length;
 
