@@ -1,11 +1,16 @@
 name: pubnub-vue
-version: 1.0.1
+version: 1.1.0
 schema: 1
 scm: github.com/pubnub/pubnub-vue
 files:
   - dist/pubnub-vue.js
   - dist/pubnub-vue.min.js
 changelog:
+  - version: v1.1.0
+    changes:
+      - type: feature
+        text: add messageCounts
+    date: 2019-03-08
   - version: v1.0.1
     changes:
       - type: bug
