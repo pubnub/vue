@@ -25,7 +25,7 @@ In order to get the integration between your Vue's application and PubNub, PubNu
 
 **PubNubVue** must be installed like a plugin.
 
-```
+```js
 import Vue from 'vue';
 import PubNubVue from 'pubnub-vue';
 import App from './App';
@@ -44,7 +44,7 @@ new Vue({
 Use the hook mounted to subscribe channels using **$pnSubscribe** method
 
 
-```
+```js
 export default {
   name: 'app',
   mounted() {
@@ -95,7 +95,7 @@ export default {
 </tr>
 </table>
 
-```
+```js
 <template>
   <div id="app">
     <ol>
@@ -123,7 +123,7 @@ export default {
 **pnGetMessage** will receive a second parameter which is a callback function that is going to be invoked as soon as received a new
 real time message. This will allow to apply a transformation or manipulate of somehow to each message or implement a custom mechanism to render these.
 
-```
+```js
 <template>
   <div id="app">
     <ol>
@@ -185,7 +185,7 @@ export default {
 </tr>
 </table>
 
-```
+```js
 <template>
   <div id="app">
     <ol>
@@ -244,7 +244,7 @@ export default {
 </tr>
 </table>
 
-```
+```js
 <template>
   <div id="app">
     {{ category }}
@@ -303,7 +303,7 @@ export default {
 </tr>
 </table>
 
-```
+```js
 <template>
   <div id="app">
     ...
@@ -357,7 +357,7 @@ export default {
 </tr>
 </table>
 
-```
+```js
 this.$pnUnsubscribe({ channels: ['ch1'] });
 ```
 
@@ -387,7 +387,7 @@ this.$pnUnsubscribe({ channels: ['ch1'] });
 </tr>
 </table>
 
-```
+```js
 this.$pnClean('ch1');
 ```
 
@@ -417,7 +417,7 @@ this.$pnClean('ch1');
 </tr>
 </table>
 
-```
+```js
 this.$pnRelease('ch1');
 ```
 
@@ -425,11 +425,11 @@ this.$pnRelease('ch1');
 
 If somehow is neccesary to access to the instance in order to get using all feature given for javascript SDK.
 
-```
+```js
 let instance = this.$pnGetInstance();
 ```
 
-```
+```js
 import PubNubVue from 'pubnub-vue';
 
 const instance = PubNubVue.getInstance();
@@ -442,7 +442,7 @@ const instance2 = PubNubVue.getInstance('instance2');
 
 The **$pnGetInstance** method will return the main instance which be created by default but if we need to create an additional instance, we can pass as a parameter the name of a new one instance and with this same name, you will have the capability of retrieving from other component inside of our application.
 
-```
+```js
 <template>
  <div id="app">
    <ol>
