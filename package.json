@@ -1,6 +1,6 @@
 {
   "name": "pubnub-vue",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Publish & Subscribe Real-time Messaging with PubNub",
   "author": "PubNub <support@pubnub.com>",
   "scripts": {
