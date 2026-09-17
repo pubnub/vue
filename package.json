@@ -1,7 +1,7 @@
 {
   "name": "pubnub-vue",
   "version": "1.0.1",
-  "description": "Publish & Subscribe Real-time Messaging with PubNub",
+  "description": "PubNub SDK for Vue. Publish/subscribe messaging over HTTP long-poll with server-assigned message ordering, channel occupancy via Here Now, and message history through Message Persistence.",
   "author": "PubNub <support@pubnub.com>",
   "scripts": {
     "test": "gulp test"
@@ -12,15 +12,18 @@
     "url": "git+https://github.com/pubnub/vue.git"
   },
   "keywords": [
-    "cloud",
-    "publish",
-    "subscribe",
-    "websockets",
-    "comet",
-    "bosh",
-    "xmpp",
+    "pubnub",
+    "realtime",
     "real-time",
+    "publish-subscribe",
+    "pubsub",
     "messaging",
+    "occupancy",
+    "presence",
+    "message-ordering",
+    "message-history",
+    "chat",
+    "long-poll",
     "vue"
   ],
   "license": "MIT",
